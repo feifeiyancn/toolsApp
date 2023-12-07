@@ -3,6 +3,10 @@
     {
       "id": "toolsPage",
       "isDefault": true
+    },
+    {
+      "id": "页面1",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -19,5 +23,6 @@
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "isManualUpdate": false,
+  "viewerLayout": "{\"color\":\"var(--ads-color-brand)\",\"logoUrl\":\"\",\"name\":\"toolsApp\",\"treeData\":[],\"outsiderTree\":[{\"title\":\"页面1\",\"pageId\":\"6571884102f2017cc3d3b80a\",\"isPage\":true},{\"title\":\"toolsPage\",\"pageId\":\"6571645002f2017cc3d3b68a\",\"isPage\":true}]}",
   "deleted": false
 }
