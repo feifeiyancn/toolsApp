@@ -995,7 +995,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `person`))(Select1.options, Select1.serverSideFiltering) }}",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
@@ -1006,9 +1006,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Left",
