@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "JSObject1.myFun1",
+    "name": "myFun2",
+    "fullyQualifiedName": "requestPathJSObject.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,15 @@
       "userPermissions": []
     },
     "pageId": "toolsPage",
-    "collectionId": "toolsPage_JSObject1",
+    "collectionId": "toolsPage_requestPathJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_JSObject1.myFun1",
+  "id": "toolsPage_requestPathJSObject.myFun2",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6571711c02f2017cc3d3b6d7"
+  "gitSyncId": "6571645002f2017cc3d3b687_657273d102f2017cc3d3bd11"
 }

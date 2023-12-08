@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "JSObject2.myFun1",
+    "name": "send",
+    "fullyQualifiedName": "requestPathJSObject.send",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,15 @@
       "userPermissions": []
     },
     "pageId": "toolsPage",
-    "collectionId": "toolsPage_JSObject2",
+    "collectionId": "toolsPage_requestPathJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {}",
+      "body": "() => {\n  requestPath.run().then(response => {\n    console.log(response.data);\n    storeValue(\"resData\", response.data);\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {}"
+      "() => {\n  requestPath.run().then(response => {\n    console.log(response.data);\n    storeValue(\"resData\", response.data);\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_JSObject2.myFun1",
+  "id": "toolsPage_requestPathJSObject.send",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_657173c202f2017cc3d3b6fd"
+  "gitSyncId": "6571645002f2017cc3d3b687_657273d102f2017cc3d3bd13"
 }

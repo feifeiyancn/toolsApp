@@ -28,7 +28,7 @@
           "children": [
             {
               "boxShadow": "none",
-              "widgetName": "Container1",
+              "widgetName": "query",
               "borderColor": "#E0DEDE",
               "isCanvas": true,
               "displayName": "容器",
@@ -335,7 +335,7 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "pub_key",
+                      "widgetName": "pubKey",
                       "displayName": "输入框",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -393,7 +393,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "url_path",
+                      "widgetName": "path",
                       "displayName": "输入框",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -449,7 +449,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "pri_key",
+                      "widgetName": "priKey",
                       "displayName": "输入框",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -538,7 +538,7 @@
             },
             {
               "boxShadow": "none",
-              "widgetName": "Input4",
+              "widgetName": "message",
               "displayName": "输入框",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
               "searchTags": [
@@ -595,8 +595,8 @@
             {
               "resetFormOnClick": false,
               "boxShadow": "none",
-              "widgetName": "Button1",
-              "onClick": "{{postWindowMessage('', 'window', '*')}}",
+              "widgetName": "send",
+              "onClick": "{{requestPathJSObject.send()}}",
               "buttonColor": "#d4d4d8",
               "dynamicPropertyPathList": [],
               "displayName": "按钮",
@@ -640,7 +640,7 @@
             },
             {
               "boxShadow": "none",
-              "widgetName": "Input5",
+              "widgetName": "res",
               "displayName": "输入框",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
               "searchTags": [
@@ -667,6 +667,9 @@
                 },
                 {
                   "key": "borderRadius"
+                },
+                {
+                  "key": "defaultText"
                 }
               ],
               "labelPosition": "Top",
@@ -691,7 +694,7 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
               "iconAlign": "left",
-              "defaultText": "",
+              "defaultText": "{{global.store.resData}}",
               "minDynamicHeight": 4
             },
             {

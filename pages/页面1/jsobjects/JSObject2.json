@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject2",
+    "pageId": "页面1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tmyFun1: () => {\n\t\t//write code here\n\t\t\n\t\t Api1.run().then((response) => {\n      console.log(response.data);\n\tstoreValue(\"res\",response.data);\n\t\t\t Input2.text=\"xxxxxxx\";\n\t\t\n\t\t\t\n})\n\n\t\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "页面1_JSObject2",
+  "deleted": false,
+  "gitSyncId": "6571645002f2017cc3d3b687_657195ae02f2017cc3d3b96c"
+}
