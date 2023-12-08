@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "requestPath",
+    "name": "delBookMark",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -20,18 +20,17 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/send",
-      "headers": [
+      "path": "/bookmark/delete",
+      "headers": [],
+      "encodeParamsToggle": true,
+      "queryParameters": [
         {
-          "key": "content-type",
-          "value": "application/json"
+          "key": "id",
+          "value": "{{bookMarkContent.selectedItem.id}}"
         }
       ],
-      "encodeParamsToggle": true,
-      "queryParameters": [],
-      "body": "{\n\t\"path\":{{pathInput.inputText}},\n\t\"message\":{{messageInput.inputText}},\n\t\"pubKey\":{{pubKeyInput.inputText}},\n\t\"priKey\":{{priKeyInput.inputText}}\n}",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -39,30 +38,27 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "queryParameters[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "messageInput.inputText",
-      "pathInput.inputText",
-      "priKeyInput.inputText",
-      "pubKeyInput.inputText"
+      "bookMarkContent.selectedItem.id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_requestPath",
+  "id": "toolsPage_delBookMark",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_657273e802f2017cc3d3bd17"
+  "gitSyncId": "6571645002f2017cc3d3b687_6572cf4f02f2017cc3d3bf89"
 }

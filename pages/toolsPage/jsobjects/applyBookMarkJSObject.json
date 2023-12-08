@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "applyBookMarkJSObject",
+    "pageId": "toolsPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tapply: () => {\n\t\tstoreValue(\"path\",bookMarkContent.selectedItem.path);\n\t\tstoreValue(\"pubKey\",bookMarkContent.selectedItem.pubKey);\n\t\tstoreValue(\"priKey\",bookMarkContent.selectedItem.priKey);\n\t\tstoreValue(\"message\",bookMarkContent.selectedItem.message);\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "toolsPage_applyBookMarkJSObject",
+  "deleted": false,
+  "gitSyncId": "6571645002f2017cc3d3b687_6572d3bc02f2017cc3d3bfc6"
+}
