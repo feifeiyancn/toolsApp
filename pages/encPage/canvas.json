@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1360,
+          "bottomRow": 1120,
           "containerStyle": "none",
           "snapRows": 44,
           "parentRowSpace": 1,
@@ -28,7 +28,8 @@
             {
               "resetFormOnClick": false,
               "boxShadow": "none",
-              "widgetName": "Button1Copy1",
+              "widgetName": "copyBut",
+              "onClick": "{{copyToClipboard(ciphertextInput.text)}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "displayName": "按钮",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -37,14 +38,18 @@
                 "submit",
                 "button"
               ],
-              "topRow": 92,
-              "bottomRow": 96,
+              "topRow": 83,
+              "bottomRow": 87,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 10.0625,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "leftColumn": 48,
               "dynamicBindingPathList": [
                 {
@@ -67,65 +72,16 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 92,
+              "originalTopRow": 139,
               "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 96,
-              "buttonVariant": "PRIMARY",
-              "placement": "CENTER"
-            },
-            {
-              "resetFormOnClick": false,
-              "boxShadow": "none",
-              "widgetName": "Button1Copy",
-              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "displayName": "按钮",
-              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-              "searchTags": [
-                "click",
-                "submit",
-                "button"
-              ],
-              "topRow": 124,
-              "bottomRow": 128,
-              "parentRowSpace": 10,
-              "type": "BUTTON_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 10.0625,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 48,
-              "dynamicBindingPathList": [
-                {
-                  "key": "buttonColor"
-                },
-                {
-                  "key": "borderRadius"
-                }
-              ],
-              "text": "复制到粘贴板",
-              "isDisabled": false,
-              "key": "8xqchdag0j",
-              "isDeprecated": false,
-              "rightColumn": 64,
-              "isDefaultClickDisabled": true,
-              "widgetId": "ivfnodti9d",
-              "isVisible": true,
-              "recaptchaType": "V3",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "originalTopRow": 124,
-              "disabledWhenInvalid": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 128,
+              "originalBottomRow": 143,
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             },
             {
               "boxShadow": "none",
-              "widgetName": "Input2Copy2",
+              "widgetName": "encPubKey",
               "displayName": "输入框",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
               "searchTags": [
@@ -160,7 +116,7 @@
               "isDisabled": false,
               "key": "nwmnuc8wvj",
               "labelTextSize": "0.875rem",
-              "isRequired": false,
+              "isRequired": true,
               "isDeprecated": false,
               "rightColumn": 64,
               "dynamicHeight": "FIXED",
@@ -181,7 +137,7 @@
             },
             {
               "boxShadow": "none",
-              "widgetName": "Input2Copy1",
+              "widgetName": "ciphertextInput",
               "displayName": "输入框",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
               "searchTags": [
@@ -190,8 +146,8 @@
                 "number",
                 "textarea"
               ],
-              "topRow": 85,
-              "bottomRow": 92,
+              "topRow": 58,
+              "bottomRow": 83,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "autoFocus": false,
@@ -208,6 +164,9 @@
                 },
                 {
                   "key": "borderRadius"
+                },
+                {
+                  "key": "defaultText"
                 }
               ],
               "labelPosition": "Top",
@@ -223,23 +182,23 @@
               "widgetId": "hfdsffbeh1",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
-              "label": "摘要",
+              "label": "加密报文",
               "version": 2,
               "parentId": "0",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 85,
+              "originalTopRow": 114,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 92,
+              "originalBottomRow": 139,
               "iconAlign": "left",
-              "defaultText": "",
+              "defaultText": "{{global.store.messageResult}}",
               "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
-              "widgetName": "Input2Copy",
+              "widgetName": "summerizInput",
               "displayName": "输入框",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
               "searchTags": [
@@ -248,8 +207,8 @@
                 "number",
                 "textarea"
               ],
-              "topRow": 96,
-              "bottomRow": 124,
+              "topRow": 93,
+              "bottomRow": 104,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "autoFocus": false,
@@ -266,6 +225,9 @@
                 },
                 {
                   "key": "borderRadius"
+                },
+                {
+                  "key": "defaultText"
                 }
               ],
               "labelPosition": "Top",
@@ -281,23 +243,23 @@
               "widgetId": "pjrcfog2wr",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
-              "label": "密文",
+              "label": "摘要",
               "version": 2,
               "parentId": "0",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 96,
+              "originalTopRow": 149,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 124,
+              "originalBottomRow": 160,
               "iconAlign": "left",
-              "defaultText": "",
+              "defaultText": "{{global.store.sumResult}}",
               "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
-              "widgetName": "Input1",
+              "widgetName": "rawDataInput",
               "displayName": "输入框",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
               "searchTags": [
@@ -332,7 +294,7 @@
               "isDisabled": false,
               "key": "nwmnuc8wvj",
               "labelTextSize": "0.875rem",
-              "isRequired": false,
+              "isRequired": true,
               "isDeprecated": false,
               "rightColumn": 64,
               "dynamicHeight": "FIXED",
@@ -352,49 +314,31 @@
               "minDynamicHeight": 4
             },
             {
-              "boxShadow": "none",
-              "borderColor": "transparent",
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
               "iconSVG": "/static/media/icon.5b428de12db9ad6a591955ead07f86e9.svg",
-              "topRow": 39,
+              "topRow": 45,
               "type": "JSON_FORM_WIDGET",
               "animateLoading": true,
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
                   "key": "submitButtonStyles.buttonColor"
+                },
+                {
+                  "key": "submitButtonStyles.borderRadius"
                 },
                 {
                   "key": "resetButtonStyles.buttonColor"
                 },
                 {
                   "key": "resetButtonStyles.borderRadius"
-                },
-                {
-                  "key": "schema.__root_schema__.children.name.defaultValue"
-                },
-                {
-                  "key": "schema.__root_schema__.children.name.accentColor"
-                },
-                {
-                  "key": "schema.__root_schema__.children.name.borderRadius"
-                },
-                {
-                  "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
-                },
-                {
-                  "key": "schema.__root_schema__.children.date_of_birth.accentColor"
-                },
-                {
-                  "key": "schema.__root_schema__.children.date_of_birth.borderRadius"
-                },
-                {
-                  "key": "schema.__root_schema__.children.employee_id.defaultValue"
-                },
-                {
-                  "key": "schema.__root_schema__.children.employee_id.accentColor"
-                },
-                {
-                  "key": "schema.__root_schema__.children.employee_id.borderRadius"
                 },
                 {
                   "key": "schema.__root_schema__.defaultValue"
@@ -404,6 +348,63 @@
                 },
                 {
                   "key": "schema.__root_schema__.cellBorderRadius"
+                },
+                {
+                  "key": "sourceData"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.data.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.data.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.data.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqOrgCode.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqOrgCode.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqOrgCode.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqSeq.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqSeq.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqSeq.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqSvcCode.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqSvcCode.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqSvcCode.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqTimeStamp.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqTimeStamp.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.children.reqTimeStamp.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.xn__3svya423nv9j.cellBorderRadius"
                 }
               ],
               "showReset": false,
@@ -497,85 +498,152 @@
                 }
               },
               "disabledWhenInvalid": true,
-              "borderRadius": "0px",
-              "originalBottomRow": 81,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "originalBottomRow": 105,
               "schema": {
                 "__root_schema__": {
                   "children": {
-                    "name": {
-                      "children": {},
-                      "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.name))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "fieldType": "Text Input",
-                      "sourceData": "John Wick",
+                    "xn__3svya423nv9j": {
+                      "children": {
+                        "data": {
+                          "children": {},
+                          "dataType": "string",
+                          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"解析结果\"].data))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "fieldType": "Text Input",
+                          "sourceData": "data",
+                          "isCustomField": false,
+                          "accessor": "data",
+                          "identifier": "data",
+                          "position": 0,
+                          "originalIdentifier": "data",
+                          "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "boxShadow": "none",
+                          "iconAlign": "left",
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "labelTextSize": "0.875rem",
+                          "label": "Data"
+                        },
+                        "reqOrgCode": {
+                          "children": {},
+                          "dataType": "string",
+                          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"解析结果\"].reqOrgCode))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "fieldType": "Text Input",
+                          "sourceData": "xx",
+                          "isCustomField": false,
+                          "accessor": "reqOrgCode",
+                          "identifier": "reqOrgCode",
+                          "position": 1,
+                          "originalIdentifier": "reqOrgCode",
+                          "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "boxShadow": "none",
+                          "iconAlign": "left",
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "labelTextSize": "0.875rem",
+                          "label": "Req Org Code"
+                        },
+                        "reqSeq": {
+                          "children": {},
+                          "dataType": "string",
+                          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"解析结果\"].reqSeq))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "fieldType": "Text Input",
+                          "sourceData": "yyt",
+                          "isCustomField": false,
+                          "accessor": "reqSeq",
+                          "identifier": "reqSeq",
+                          "position": 2,
+                          "originalIdentifier": "reqSeq",
+                          "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "boxShadow": "none",
+                          "iconAlign": "left",
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "labelTextSize": "0.875rem",
+                          "label": "Req Seq"
+                        },
+                        "reqSvcCode": {
+                          "children": {},
+                          "dataType": "string",
+                          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"解析结果\"].reqSvcCode))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "fieldType": "Text Input",
+                          "sourceData": "svc",
+                          "isCustomField": false,
+                          "accessor": "reqSvcCode",
+                          "identifier": "reqSvcCode",
+                          "position": 3,
+                          "originalIdentifier": "reqSvcCode",
+                          "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "boxShadow": "none",
+                          "iconAlign": "left",
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "labelTextSize": "0.875rem",
+                          "label": "Req Svc Code"
+                        },
+                        "reqTimeStamp": {
+                          "children": {},
+                          "dataType": "string",
+                          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"解析结果\"].reqTimeStamp))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "fieldType": "Text Input",
+                          "sourceData": "2222",
+                          "isCustomField": false,
+                          "accessor": "reqTimeStamp",
+                          "identifier": "reqTimeStamp",
+                          "position": 4,
+                          "originalIdentifier": "reqTimeStamp",
+                          "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                          "boxShadow": "none",
+                          "iconAlign": "left",
+                          "isDisabled": false,
+                          "isRequired": false,
+                          "isSpellCheck": false,
+                          "isVisible": true,
+                          "labelTextSize": "0.875rem",
+                          "label": "Req Time Stamp"
+                        }
+                      },
+                      "dataType": "object",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData[\"解析结果\"]))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                      "fieldType": "Object",
+                      "sourceData": {
+                        "data": "data",
+                        "reqOrgCode": "xx",
+                        "reqSeq": "yyt",
+                        "reqSvcCode": "svc",
+                        "reqTimeStamp": "2222"
+                      },
                       "isCustomField": false,
-                      "accessor": "name",
-                      "identifier": "name",
+                      "accessor": "解析结果",
+                      "identifier": "xn__3svya423nv9j",
                       "position": 0,
-                      "originalIdentifier": "name",
-                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                      "originalIdentifier": "解析结果",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
+                      "cellBorderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
+                      "cellBoxShadow": "none",
                       "isDisabled": false,
                       "isRequired": false,
-                      "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "服务"
-                    },
-                    "date_of_birth": {
-                      "children": {},
-                      "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.date_of_birth, \"DD/MM/YYYY\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "fieldType": "Datepicker",
-                      "sourceData": "20/02/1990",
-                      "isCustomField": false,
-                      "accessor": "date_of_birth",
-                      "identifier": "date_of_birth",
-                      "position": 1,
-                      "originalIdentifier": "date_of_birth",
-                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "boxShadow": "none",
-                      "closeOnSelection": false,
-                      "convertToISO": false,
-                      "dateFormat": "DD/MM/YYYY",
-                      "isDisabled": false,
-                      "isRequired": false,
-                      "isVisible": true,
-                      "label": "服务2",
-                      "maxDate": "2121-12-31T18:29:00.000Z",
-                      "minDate": "1920-12-31T18:30:00.000Z",
-                      "shortcuts": false,
-                      "timePrecision": "minute",
-                      "labelTextSize": "0.875rem"
-                    },
-                    "employee_id": {
-                      "children": {},
-                      "dataType": "number",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.employee_id))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "fieldType": "Number Input",
-                      "sourceData": 1001,
-                      "isCustomField": false,
-                      "accessor": "employee_id",
-                      "identifier": "employee_id",
-                      "position": 2,
-                      "originalIdentifier": "employee_id",
-                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                      "boxShadow": "none",
-                      "iconAlign": "left",
-                      "isDisabled": false,
-                      "isRequired": false,
-                      "isSpellCheck": false,
-                      "isVisible": true,
-                      "labelTextSize": "0.875rem",
-                      "label": "服务3"
+                      "label": "解析结果"
                     }
                   },
                   "dataType": "object",
-                  "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
                   "fieldType": "Object",
                   "sourceData": {
                     "name": "John Wick",
@@ -587,9 +655,9 @@
                   "identifier": "__root_schema__",
                   "position": -1,
                   "originalIdentifier": "__root_schema__",
-                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
                   "boxShadow": "none",
-                  "cellBorderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                  "cellBorderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(parseResultJSON.sourceData, parseResultJSON.formData, parseResultJSON.fieldState)}}",
                   "cellBoxShadow": "none",
                   "isDisabled": false,
                   "isRequired": false,
@@ -598,51 +666,93 @@
                   "label": ""
                 }
               },
-              "widgetName": "JSONForm1",
+              "widgetName": "parseResultJSON",
               "submitButtonStyles": {
                 "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                "borderRadius": "0px",
+                "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                 "boxShadow": "none",
-                "buttonVariant": "PRIMARY",
-                "placement": "CENTER",
-                "iconAlign": "left"
+                "buttonVariant": "PRIMARY"
               },
-              "dynamicPropertyPathList": [
-                {
-                  "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "JSON表单",
               "searchTags": [
                 "json form"
               ],
-              "bottomRow": 81,
+              "bottomRow": 49,
               "fieldLimitExceeded": false,
               "parentRowSpace": 10,
-              "title": "解析后",
+              "title": "",
               "hideCard": false,
               "shouldScrollContents": true,
               "parentColumnSpace": 10.0625,
               "dynamicTriggerPathList": [],
               "borderWidth": "1",
-              "sourceData": {
-                "name": "John Wick",
-                "date_of_birth": "20/02/1990",
-                "employee_id": 1001
-              },
-              "resetButtonLabel": "重置",
-              "key": "0f2x6z7d9b",
-              "backgroundColor": "transparent",
+              "sourceData": "{\n  \"解析结果\": {{global.store.parseResult}}\n}",
+              "resetButtonLabel": "解析",
+              "key": "u8p05oyw0l",
+              "backgroundColor": "#fff",
               "isDeprecated": false,
               "rightColumn": 64,
-              "widgetId": "e9tso6uz4u",
+              "widgetId": "xbg5r1i4o5",
               "parentId": "0",
               "renderMode": "CANVAS",
-              "scrollContents": false,
+              "scrollContents": true,
               "fixedFooter": true,
-              "originalTopRow": 39,
+              "originalTopRow": 45,
               "maxDynamicHeight": 9000,
               "minDynamicHeight": 4
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "parse",
+              "onClick": "{{parseDataJSObject.parseMessageApi()}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "按钮",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit",
+                "button"
+              ],
+              "topRow": 38,
+              "bottomRow": 42,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 10.0625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 48,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "开始解析",
+              "isDisabled": false,
+              "key": "3zov438w8g",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "isDefaultClickDisabled": true,
+              "widgetId": "st4v6dilfc",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
             }
           ]
         },

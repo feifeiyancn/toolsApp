@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "parseDataJSObject",
+    "pageId": "encPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tparseMessageApi: () => {\n\t\t parseMessageApi.run().then((response) => {\n     console.log(response.data);\n\t   storeValue(\"parseResult\",response.data);\n\t\t })\n\t},\n\t\t\n\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "encPage_parseDataJSObject",
+  "deleted": false,
+  "gitSyncId": "6571645002f2017cc3d3b687_6572df0e02f2017cc3d3c083"
+}

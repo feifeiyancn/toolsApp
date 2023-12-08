@@ -467,7 +467,7 @@
                       "widgetId": "8cvatuyues",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
-                      "label": "URL",
+                      "label": "Path",
                       "version": 2,
                       "parentId": "my2dm9nbww",
                       "labelAlignment": "left",
