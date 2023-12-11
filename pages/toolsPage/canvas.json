@@ -385,9 +385,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Left",
@@ -416,7 +413,7 @@
                       "originalBottomRow": 16,
                       "isSpellCheck": true,
                       "iconAlign": "left",
-                      "defaultText": "{{global.store.pubKey}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     },
                     {
@@ -448,9 +445,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Left",
@@ -476,7 +470,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{global.store.path}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     },
                     {
@@ -508,9 +502,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Left",
@@ -535,7 +526,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{global.store.priKey}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -600,9 +591,6 @@
                 },
                 {
                   "key": "borderRadius"
-                },
-                {
-                  "key": "defaultText"
                 }
               ],
               "labelPosition": "Top",
@@ -629,7 +617,7 @@
               "maxDynamicHeight": 9000,
               "originalBottomRow": 65,
               "iconAlign": "left",
-              "defaultText": "{{global.store.message}}",
+              "defaultText": "",
               "minDynamicHeight": 4
             },
             {
