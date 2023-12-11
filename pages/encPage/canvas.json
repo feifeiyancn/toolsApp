@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1120,
+          "bottomRow": 1590,
           "containerStyle": "none",
           "snapRows": 44,
           "parentRowSpace": 1,
@@ -28,7 +28,7 @@
             {
               "resetFormOnClick": false,
               "boxShadow": "none",
-              "widgetName": "copyBut",
+              "widgetName": "copyButCopy",
               "onClick": "{{copyToClipboard(ciphertextInput.text)}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "displayName": "按钮",
@@ -38,8 +38,8 @@
                 "submit",
                 "button"
               ],
-              "topRow": 83,
-              "bottomRow": 87,
+              "topRow": 147,
+              "bottomRow": 151,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -54,9 +54,57 @@
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
-                },
+                }
+              ],
+              "text": "复制到粘贴板",
+              "isDisabled": false,
+              "key": "8xqchdag0j",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "isDefaultClickDisabled": true,
+              "widgetId": "59dmge609g",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "originalTopRow": 83,
+              "disabledWhenInvalid": false,
+              "borderRadius": "0px",
+              "originalBottomRow": 87,
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "copyBut",
+              "onClick": "{{copyToClipboard(ciphertextInput.text)}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "按钮",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit",
+                "button"
+              ],
+              "topRow": 133,
+              "bottomRow": 137,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 10.0625,
+              "dynamicTriggerPathList": [
                 {
-                  "key": "borderRadius"
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 48,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
                 }
               ],
               "text": "复制到粘贴板",
@@ -72,10 +120,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 139,
+              "originalTopRow": 83,
               "disabledWhenInvalid": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 143,
+              "borderRadius": "0px",
+              "originalBottomRow": 87,
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             },
@@ -146,8 +194,8 @@
                 "number",
                 "textarea"
               ],
-              "topRow": 58,
-              "bottomRow": 83,
+              "topRow": 108,
+              "bottomRow": 133,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "autoFocus": false,
@@ -188,10 +236,10 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 114,
+              "originalTopRow": 58,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 139,
+              "originalBottomRow": 83,
               "iconAlign": "left",
               "defaultText": "{{global.store.messageResult}}",
               "minDynamicHeight": 4
@@ -207,8 +255,8 @@
                 "number",
                 "textarea"
               ],
-              "topRow": 93,
-              "bottomRow": 104,
+              "topRow": 138,
+              "bottomRow": 147,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "autoFocus": false,
@@ -249,10 +297,10 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "originalTopRow": 149,
+              "originalTopRow": 93,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 160,
+              "originalBottomRow": 104,
               "iconAlign": "left",
               "defaultText": "{{global.store.sumResult}}",
               "minDynamicHeight": 4
@@ -314,7 +362,7 @@
               "minDynamicHeight": 4
             },
             {
-              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "boxShadow": "none",
               "borderColor": "#E0DEDE",
               "iconSVG": "/static/media/icon.5b428de12db9ad6a591955ead07f86e9.svg",
               "topRow": 45,
@@ -323,16 +371,7 @@
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
-                  "key": "borderRadius"
-                },
-                {
-                  "key": "boxShadow"
-                },
-                {
                   "key": "submitButtonStyles.buttonColor"
-                },
-                {
-                  "key": "submitButtonStyles.borderRadius"
                 },
                 {
                   "key": "resetButtonStyles.buttonColor"
@@ -498,8 +537,8 @@
                 }
               },
               "disabledWhenInvalid": true,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 105,
+              "borderRadius": "0px",
+              "originalBottomRow": 49,
               "schema": {
                 "__root_schema__": {
                   "children": {
@@ -669,7 +708,7 @@
               "widgetName": "parseResultJSON",
               "submitButtonStyles": {
                 "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                "borderRadius": "0px",
                 "boxShadow": "none",
                 "buttonVariant": "PRIMARY"
               },
@@ -678,7 +717,7 @@
               "searchTags": [
                 "json form"
               ],
-              "bottomRow": 49,
+              "bottomRow": 105,
               "fieldLimitExceeded": false,
               "parentRowSpace": 10,
               "title": "",
@@ -731,9 +770,6 @@
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
-                },
-                {
-                  "key": "borderRadius"
                 }
               ],
               "text": "开始解析",
@@ -750,7 +786,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "disabledWhenInvalid": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "borderRadius": "0px",
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
             }
