@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "encMessageApi",
+    "name": "parseMessageAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://f33a-103-85-164-231.ngrok-free.app"
+        "url": "https://85dd-103-85-164-231.ngrok-free.app"
       },
       "invalids": [],
       "messages": [],
@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/message/enc",
+      "path": "/message/parse",
       "headers": [
         {
           "key": "content-type",
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{parseResultJSON.sourceData}}\n",
+      "body": "{\n\t\"message\":{{plainTextInput.inputText}},\n\t\"pubKey\":{{pubKey.inputText}}\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,14 +52,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "parseResultJSON.sourceData"
+      "plainTextInput.inputText",
+      "pubKey.inputText"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "encPage_encMessageApi",
+  "id": "encPage_parseMessageAPI",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572e5fc02f2017cc3d3c0c2"
+  "gitSyncId": "6571645002f2017cc3d3b687_6572de8902f2017cc3d3c07c"
 }

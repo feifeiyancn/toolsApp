@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "encJSObject",
+    "pageId": "encPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tencMessageAPI: () => {\n\t\t encMessageAPI.run().then((response) => {\n     console.log(response);\n\t\tif(response.code !=0 ){\n\t\t\tstoreValue(\"messageResult\",response);\n\t\t\treturn;\n\t\t}\n\t\t removeValue(\"messageResult\");\n\t\t removeValue(\"sumResult\")\n\t   storeValue(\"messageResult\",response.data.message);\n\t\t storeValue(\"sumResult\",response.data.sum);\n\t\t })\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "encPage_encJSObject",
+  "deleted": false,
+  "gitSyncId": "6571645002f2017cc3d3b687_6572e5da02f2017cc3d3c0c0"
+}

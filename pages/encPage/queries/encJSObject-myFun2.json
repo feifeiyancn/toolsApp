@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "myFun2",
-    "fullyQualifiedName": "encMessageJSObject.myFun2",
+    "fullyQualifiedName": "encJSObject.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "encPage",
-    "collectionId": "encPage_encMessageJSObject",
+    "collectionId": "encPage_encJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "encPage_encMessageJSObject.myFun2",
+  "id": "encPage_encJSObject.myFun2",
   "deleted": false,
   "gitSyncId": "6571645002f2017cc3d3b687_6572e5da02f2017cc3d3c0bd"
 }
