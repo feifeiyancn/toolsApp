@@ -381,8 +381,12 @@
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 10.0625,
-              "dynamicTriggerPathList": [],
-              "resetOnSubmit": true,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onFocus"
+                }
+              ],
+              "resetOnSubmit": false,
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -408,6 +412,7 @@
               "label": "原始报文",
               "version": 2,
               "parentId": "0",
+              "onFocus": "{{clearStore()}}",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
