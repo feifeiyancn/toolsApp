@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "applyBookMarkJSObject.myFun2",
+    "name": "delete",
+    "fullyQualifiedName": "bookMarkJSObject.delete",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,18 +14,17 @@
       "userPermissions": []
     },
     "pageId": "toolsPage",
-    "collectionId": "toolsPage_applyBookMarkJSObject",
+    "collectionId": "toolsPage_bookMarkJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "() => {\n  deleteBookMark.run();\n  listBookMark.run();\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "() => {\n  deleteBookMark.run();\n  listBookMark.run();\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_applyBookMarkJSObject.myFun2",
+  "id": "toolsPage_bookMarkJSObject.delete",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572d3bc02f2017cc3d3bfc3"
+  "gitSyncId": "6571645002f2017cc3d3b687_65782a1202f2017cc3d3d261"
 }

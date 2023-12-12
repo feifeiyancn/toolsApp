@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "bookmarkJSObject.myFun1",
+    "name": "myFun2",
+    "fullyQualifiedName": "bookMarkJSObject.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,15 @@
       "userPermissions": []
     },
     "pageId": "toolsPage",
-    "collectionId": "toolsPage_bookmarkJSObject",
+    "collectionId": "toolsPage_bookMarkJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_bookmarkJSObject.myFun1",
+  "id": "toolsPage_bookMarkJSObject.myFun2",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572bb7702f2017cc3d3befe"
+  "gitSyncId": "6571645002f2017cc3d3b687_6572d3bc02f2017cc3d3bfc3"
 }

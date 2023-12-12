@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "bookMarkJSObject",
+    "pageId": "toolsPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tapply: () => {\n\t\tstoreValue(\"path\",bookMarkList.selectedItem.path);\n\t\tstoreValue(\"pubKey\",bookMarkList.selectedItem.pubKey);\n\t\tstoreValue(\"priKey\",bookMarkList.selectedItem.priKey);\n\t\tstoreValue(\"message\",bookMarkList.selectedItem.message);\n\t\tcloseModal(\"bookMarkWindow\");\n\t},\n\t\n\t\n\tadd: () => {\n\t\t addBookmark.run().then((response) => {\n\t\t\t \tshowAlert(response.msg,\"info\");\n\t});\n\tcloseModal(\"addBookMarkWindow\");\n\t},\n\t\n\tdelete: () => {\n\t deleteBookMark.run();\n\t listBookMark.run();\n\t},\n\t\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "toolsPage_bookMarkJSObject",
+  "deleted": false,
+  "gitSyncId": "6571645002f2017cc3d3b687_6572d3bc02f2017cc3d3bfc6"
+}

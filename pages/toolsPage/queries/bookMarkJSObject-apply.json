@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "apply",
-    "fullyQualifiedName": "applyBookMarkJSObject.apply",
+    "fullyQualifiedName": "bookMarkJSObject.apply",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "toolsPage",
-    "collectionId": "toolsPage_applyBookMarkJSObject",
+    "collectionId": "toolsPage_bookMarkJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  storeValue(\"path\", bookMarkContent.selectedItem.path);\n  storeValue(\"pubKey\", bookMarkContent.selectedItem.pubKey);\n  storeValue(\"priKey\", bookMarkContent.selectedItem.priKey);\n  storeValue(\"message\", bookMarkContent.selectedItem.message);\n}",
+      "body": "() => {\n  storeValue(\"path\", bookMarkList.selectedItem.path);\n  storeValue(\"pubKey\", bookMarkList.selectedItem.pubKey);\n  storeValue(\"priKey\", bookMarkList.selectedItem.priKey);\n  storeValue(\"message\", bookMarkList.selectedItem.message);\n  closeModal(\"bookMarkWindow\");\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  storeValue(\"path\", bookMarkContent.selectedItem.path);\n  storeValue(\"pubKey\", bookMarkContent.selectedItem.pubKey);\n  storeValue(\"priKey\", bookMarkContent.selectedItem.priKey);\n  storeValue(\"message\", bookMarkContent.selectedItem.message);\n}"
+      "() => {\n  storeValue(\"path\", bookMarkList.selectedItem.path);\n  storeValue(\"pubKey\", bookMarkList.selectedItem.pubKey);\n  storeValue(\"priKey\", bookMarkList.selectedItem.priKey);\n  storeValue(\"message\", bookMarkList.selectedItem.message);\n  closeModal(\"bookMarkWindow\");\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_applyBookMarkJSObject.apply",
+  "id": "toolsPage_bookMarkJSObject.apply",
   "deleted": false,
   "gitSyncId": "6571645002f2017cc3d3b687_6572d3bb02f2017cc3d3bfc2"
 }

@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://f33a-103-85-164-231.ngrok-free.app"
+        "url": "https://1189-103-85-164-231.ngrok-free.app"
       },
       "invalids": [],
       "messages": [],
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\t\"name\":{{bookMarkName.inputText}},\n\t\"user\":\"default\",\n\t\"type\":{{bookMarkType.selectedOptionLabel}}\n}",
+      "body": "{\n\t\"name\":{{bookMarkName.inputText}},\n\t\"user\":\"default\",\n\t\"type\":{{bookMarkType.selectedOptionLabel}},\n\t\"path\":{{pathInput.inputText}},\n\t\"pubKey\":{{pubKeyInput.inputText}},\n\t\"priKey\":{{priKeyInput.inputText}},\n\t\"message\":{{messageInput.inputText}}\n\t\n\t\n\t\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -53,7 +53,11 @@
     "messages": [],
     "jsonPathKeys": [
       "bookMarkName.inputText",
-      "bookMarkType.selectedOptionLabel"
+      "bookMarkType.selectedOptionLabel",
+      "messageInput.inputText",
+      "pathInput.inputText",
+      "priKeyInput.inputText",
+      "pubKeyInput.inputText"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
