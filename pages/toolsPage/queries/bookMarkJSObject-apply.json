@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  closeModal(\"bookMarkWindow\");\n  navigateTo('toolsPage', {\n    \"path\": bookMarkList.selectedItem.path,\n    \"pubKey\": bookMarkList.selectedItem.pubKey\n  }, \"NEW_WINDOW\");\n  storeValue(\"message\", bookMarkList.selectedItem.message);\n}",
+      "body": "() => {\n  closeModal(\"bookMarkWindow\");\n  navigateTo('toolsPage', {\n    \"path\": bookMarkList.selectedItem.path,\n    \"pubKey\": bookMarkList.selectedItem.pubKey\n  }, \"SAME_WINDOW\");\n  storeValue(\"message\", bookMarkList.selectedItem.message);\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  closeModal(\"bookMarkWindow\");\n  navigateTo('toolsPage', {\n    \"path\": bookMarkList.selectedItem.path,\n    \"pubKey\": bookMarkList.selectedItem.pubKey\n  }, \"NEW_WINDOW\");\n  storeValue(\"message\", bookMarkList.selectedItem.message);\n}"
+      "() => {\n  closeModal(\"bookMarkWindow\");\n  navigateTo('toolsPage', {\n    \"path\": bookMarkList.selectedItem.path,\n    \"pubKey\": bookMarkList.selectedItem.pubKey\n  }, \"SAME_WINDOW\");\n  storeValue(\"message\", bookMarkList.selectedItem.message);\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
