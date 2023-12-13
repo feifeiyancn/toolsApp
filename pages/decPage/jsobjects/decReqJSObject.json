@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "decReqJSObject",
+    "pageId": "decPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\ndecReqData: () => {\n\t\t decRequestAPI.run().then((response) => {\n\t\t\tif(response.code != 0){\n\t\t\t \t storeValue(\"decReq\", response);\n\t\t\t }else{\n\t\t\t\t \t storeValue(\"decReq\", response.data);\n\t\t\t }\n\t\t\t });\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "decPage_decReqJSObject",
+  "deleted": false,
+  "gitSyncId": "6571645002f2017cc3d3b687_65791a5302f2017cc3d3d534"
+}

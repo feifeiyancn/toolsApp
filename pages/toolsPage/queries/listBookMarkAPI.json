@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "deleteBookMark",
+    "name": "listBookMarkAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -20,13 +20,13 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/bookmark/delete",
+      "path": "/bookmark/list",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "id",
-          "value": "{{bookMarkList.selectedItem.id}}"
+          "key": "user",
+          "value": "default"
         }
       ],
       "bodyFormData": [],
@@ -41,27 +41,18 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "path"
-      },
-      {
-        "key": "queryParameters[0].value"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "bookMarkList.selectedItem.id"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_deleteBookMark",
+  "id": "toolsPage_listBookMarkAPI",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572cf4f02f2017cc3d3bf89"
+  "gitSyncId": "6571645002f2017cc3d3b687_6572c52302f2017cc3d3bf27"
 }

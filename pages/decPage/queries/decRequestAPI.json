@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "listBookMark",
+    "name": "decRequestAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,21 +16,22 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
+    "pageId": "decPage",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/bookmark/list",
-      "headers": [],
-      "encodeParamsToggle": true,
-      "queryParameters": [
+      "path": "/message/dec",
+      "headers": [
         {
-          "key": "user",
-          "value": "default"
+          "key": "content-type",
+          "value": "application/json"
         }
       ],
+      "encodeParamsToggle": true,
+      "queryParameters": [],
+      "body": "{\n\t\"message\":{{reqData.inputText}},\n\t\"priKey\":{{priKey.inputText}}\n}",
       "bodyFormData": [],
-      "httpMethod": "GET",
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -38,21 +39,28 @@
         }
       ],
       "formData": {
-        "apiContentType": "none"
+        "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "priKey.inputText",
+      "reqData.inputText"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_listBookMark",
+  "id": "decPage_decRequestAPI",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572c52302f2017cc3d3bf27"
+  "gitSyncId": "6571645002f2017cc3d3b687_6579177102f2017cc3d3d511"
 }

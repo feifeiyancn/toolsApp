@@ -7,6 +7,10 @@
     {
       "id": "encPage",
       "isDefault": false
+    },
+    {
+      "id": "decPage",
+      "isDefault": false
     }
   ],
   "viewMode": false,

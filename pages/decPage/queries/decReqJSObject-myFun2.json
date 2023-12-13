@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "delete",
-    "fullyQualifiedName": "bookMarkJSObject.delete",
+    "name": "myFun2",
+    "fullyQualifiedName": "decReqJSObject.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
-    "collectionId": "toolsPage_bookMarkJSObject",
+    "pageId": "decPage",
+    "collectionId": "decPage_decReqJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  deleteBookMark.run().then(response => {\n    if (response.code == 0) {\n      showAlert(\"删除成功,请刷新\", \"info\");\n    } else {\n      showAlert(response.msg, \"info\");\n    }\n  });\n}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  deleteBookMark.run().then(response => {\n    if (response.code == 0) {\n      showAlert(\"删除成功,请刷新\", \"info\");\n    } else {\n      showAlert(response.msg, \"info\");\n    }\n  });\n}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_bookMarkJSObject.delete",
+  "id": "decPage_decReqJSObject.myFun2",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_65782a1202f2017cc3d3d261"
+  "gitSyncId": "6571645002f2017cc3d3b687_65791a5302f2017cc3d3d531"
 }
