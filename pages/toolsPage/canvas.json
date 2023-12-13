@@ -2034,7 +2034,7 @@
                       "backgroundColor": "#fafafa",
                       "isDeprecated": false,
                       "rightColumn": 57,
-                      "onListItemClick": "",
+                      "onListItemClick": "{{bookMarkJSObject.selectItem()}}",
                       "itemBackgroundColor": "#f4f4f5",
                       "widgetId": "gq7i5s86po",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
