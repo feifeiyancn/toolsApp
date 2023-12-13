@@ -1365,7 +1365,8 @@
                             "parentId": true
                           },
                           "originalTopRow": 2,
-                          "originalBottomRow": 6
+                          "originalBottomRow": 6,
+                          "disableLink": true
                         },
                         "nameText": {
                           "isVisible": true,
@@ -1525,10 +1526,14 @@
                           }
                         },
                         "itemContainer": {
-                          "borderColor": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '#3b82f6';\n              })();\n            })}}",
-                          "borderRadius": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  appsmith.theme.borderRadius.appBorderRadius;\n              })();\n            })}}",
+                          "borderColor": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '#60a5fa';\n              })();\n            })}}",
+                          "borderRadius": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '0px';\n              })();\n            })}}",
                           "boxShadow": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';\n              })();\n            })}}",
-                          "backgroundColor": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '#fafafa';\n              })();\n            })}}"
+                          "backgroundColor": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '#fafafa';\n              })();\n            })}}",
+                          "backgroundImage": "",
+                          "borderWidth": "{{bookMarkList.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  '0';\n              })();\n            })}}",
+                          "isVisible": true,
+                          "animateLoading": true
                         }
                       },
                       "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -1591,6 +1596,9 @@
                         },
                         {
                           "key": "template.itemContainer.backgroundColor"
+                        },
+                        {
+                          "key": "template.itemContainer.borderWidth"
                         }
                       ],
                       "gridType": "vertical",
@@ -1616,11 +1624,12 @@
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "itemContainer",
-                              "borderColor": "#3b82f6",
+                              "borderColor": "#60a5fa",
                               "disallowCopy": true,
                               "isCanvas": true,
                               "displayName": "容器",
                               "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+                              "backgroundImage": "",
                               "searchTags": [
                                 "div",
                                 "parent",
@@ -1638,11 +1647,7 @@
                               "animateLoading": true,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
+                              "dynamicBindingPathList": [],
                               "children": [
                                 {
                                   "widgetName": "Canvas6",
@@ -1711,6 +1716,7 @@
                                       "key": "24nav9kcaj",
                                       "isDeprecated": false,
                                       "rightColumn": 64,
+                                      "disableLink": true,
                                       "textAlign": "LEFT",
                                       "dynamicHeight": "AUTO_HEIGHT",
                                       "widgetId": "8bsbi7cgbq",
@@ -1986,7 +1992,7 @@
                                   "key": "jh0gq5v5tn"
                                 }
                               ],
-                              "borderWidth": "1",
+                              "borderWidth": "0",
                               "key": "i92nmjd3gj",
                               "disablePropertyPane": true,
                               "backgroundColor": "#fafafa",
@@ -2003,7 +2009,7 @@
                               "disabledWidgetFeatures": [
                                 "dynamicHeight"
                               ],
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "borderRadius": "0px",
                               "maxDynamicHeight": 9000,
                               "minDynamicHeight": 10
                             }
@@ -2029,7 +2035,7 @@
                       "isDeprecated": false,
                       "rightColumn": 57,
                       "onListItemClick": "",
-                      "itemBackgroundColor": "#fafafa",
+                      "itemBackgroundColor": "#f4f4f5",
                       "widgetId": "gq7i5s86po",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
