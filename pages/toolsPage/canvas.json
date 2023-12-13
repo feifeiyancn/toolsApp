@@ -1559,9 +1559,6 @@
                           "key": "listData"
                         },
                         {
-                          "key": "itemBackgroundColor"
-                        },
-                        {
                           "key": "template.bookmarkPath.text"
                         },
                         {
@@ -2006,7 +2003,7 @@
                       "isDeprecated": false,
                       "rightColumn": 57,
                       "onListItemClick": "",
-                      "itemBackgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
+                      "itemBackgroundColor": "#fafafa",
                       "widgetId": "gq7i5s86po",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -2050,7 +2047,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "删除收藏",
+                      "text": "删除",
                       "isDisabled": false,
                       "key": "w06hgg3qnx",
                       "isDeprecated": false,
@@ -2102,7 +2099,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "应用收藏",
+                      "text": "应用",
                       "isDisabled": false,
                       "key": "w06hgg3qnx",
                       "isDeprecated": false,
@@ -2170,7 +2167,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "refleshBut",
-                      "onClick": "{{listBookMarkAPI.run(() => {}, () => showAlert('刷新失败','error'))}}",
+                      "onClick": "{{listBookMarkAPI.run(() => showAlert('刷新成功','success'), () => showAlert('刷新失败','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "图标按钮",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -2237,7 +2234,7 @@
               "detachFromLayout": true,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "1iy0d44zup",
-              "canOutsideClickClose": true,
+              "canOutsideClickClose": false,
               "canEscapeKeyClose": true,
               "version": 2,
               "parentId": "0",
