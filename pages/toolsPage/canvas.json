@@ -40,8 +40,8 @@
                 "submit",
                 "button"
               ],
-              "topRow": 29,
-              "bottomRow": 33,
+              "topRow": 69,
+              "bottomRow": 73,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -52,13 +52,13 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 55,
+              "leftColumn": 36,
               "dynamicBindingPathList": [],
-              "text": "复制返参",
+              "text": "复制到粘贴板",
               "isDisabled": false,
               "key": "fzxenz5j7l",
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 48,
               "isDefaultClickDisabled": true,
               "widgetId": "15jek8zixa",
               "isVisible": true,
@@ -410,25 +410,11 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "pubKeyInput",
-                      "displayName": "输入框",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "autoFocus": true,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 8.900634765625,
-                      "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
@@ -437,39 +423,59 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
-                      "labelPosition": "Left",
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "maxChars": "2000",
                       "placeholderText": "使用金控提供的公钥加密DATA",
                       "isDisabled": false,
-                      "key": "0jm2eye1zl",
-                      "labelTextSize": "0.875rem",
                       "isRequired": true,
-                      "isDeprecated": false,
-                      "rightColumn": 62,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "pzp0qzw585",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
-                      "label": "公钥",
                       "version": 2,
+                      "onFocus": "",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 16,
+                      "widgetName": "pubKeyInput",
+                      "displayName": "输入框",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "autoFocus": true,
+                      "hideCard": false,
+                      "parentColumnSpace": 8.900634765625,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFocus"
+                        },
+                        {
+                          "key": "onTextChanged"
+                        }
+                      ],
+                      "labelPosition": "Left",
+                      "key": "0jm2eye1zl",
+                      "labelTextSize": "0.875rem",
+                      "onTextChanged": "{{removeValue('resData')}}",
+                      "isDeprecated": false,
+                      "rightColumn": 62,
+                      "widgetId": "pzp0qzw585",
+                      "label": "公钥",
                       "parentId": "my2dm9nbww",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "originalTopRow": 9,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 16,
                       "isSpellCheck": true,
                       "iconAlign": "left",
-                      "defaultText": "{{global.store.pubKey}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     },
                     {
@@ -509,9 +515,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Left",
@@ -540,7 +543,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{global.store.path}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     },
                     {
@@ -556,6 +559,7 @@
                       ],
                       "topRow": 12,
                       "bottomRow": 16,
+                      "tooltip": "私钥不会保存到收藏夹",
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -563,7 +567,14 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.900634765625,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFocus"
+                        },
+                        {
+                          "key": "onTextChanged"
+                        }
+                      ],
                       "resetOnSubmit": true,
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
@@ -572,9 +583,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Left",
@@ -585,6 +593,7 @@
                       "key": "0jm2eye1zl",
                       "labelTextSize": "0.875rem",
                       "isRequired": true,
+                      "onTextChanged": "{{removeValue('resData')}}",
                       "isDeprecated": false,
                       "rightColumn": 62,
                       "dynamicHeight": "FIXED",
@@ -594,13 +603,14 @@
                       "label": "私钥",
                       "version": 2,
                       "parentId": "my2dm9nbww",
+                      "onFocus": "",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{global.store.priKey}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -648,7 +658,7 @@
                 "textarea"
               ],
               "topRow": 33,
-              "bottomRow": 67,
+              "bottomRow": 69,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "autoFocus": false,
@@ -666,12 +676,6 @@
               "dynamicBindingPathList": [
                 {
                   "key": "accentColor"
-                },
-                {
-                  "key": "borderRadius"
-                },
-                {
-                  "key": "defaultText"
                 }
               ],
               "labelPosition": "Top",
@@ -695,11 +699,11 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "originalTopRow": 31,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "borderRadius": "0px",
               "maxDynamicHeight": 9000,
               "originalBottomRow": 65,
               "iconAlign": "left",
-              "defaultText": "{{global.store.message}}",
+              "defaultText": "",
               "minDynamicHeight": 4
             },
             {
@@ -716,8 +720,8 @@
                 "submit",
                 "button"
               ],
-              "topRow": 38,
-              "bottomRow": 42,
+              "topRow": 43,
+              "bottomRow": 47,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -762,7 +766,7 @@
                 "textarea"
               ],
               "topRow": 33,
-              "bottomRow": 66,
+              "bottomRow": 69,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "autoFocus": false,
@@ -771,14 +775,11 @@
               "animateLoading": true,
               "parentColumnSpace": 9.359375,
               "dynamicTriggerPathList": [],
-              "resetOnSubmit": true,
-              "leftColumn": 37,
+              "resetOnSubmit": false,
+              "leftColumn": 36,
               "dynamicBindingPathList": [
                 {
                   "key": "accentColor"
-                },
-                {
-                  "key": "borderRadius"
                 },
                 {
                   "key": "defaultText"
@@ -792,7 +793,7 @@
               "labelTextSize": "0.875rem",
               "isRequired": false,
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 63,
               "dynamicHeight": "FIXED",
               "widgetId": "2tnul6ksk8",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -804,7 +805,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "originalTopRow": 31,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "borderRadius": "0px",
               "maxDynamicHeight": 9000,
               "originalBottomRow": 64,
               "iconAlign": "left",

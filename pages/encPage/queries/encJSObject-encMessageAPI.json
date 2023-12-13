@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  encMessageAPI.run().then(response => {\n    console.log(response);\n    if (response.code != 0) {\n      storeValue(\"messageResult\", response);\n      return;\n    }\n    removeValue(\"messageResult\");\n    removeValue(\"sumResult\");\n    storeValue(\"messageResult\", response.data.message);\n    storeValue(\"sumResult\", response.data.sum);\n  });\n}",
+      "body": "() => {\n  encMessageAPI.run().then(response => {\n    if (response.code != 0) {\n      storeValue(\"messageResult\", response);\n    } else {\n      storeValue(\"messageResult\", response.data.message);\n      storeValue(\"sumResult\", response.data.sum);\n    }\n  });\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  encMessageAPI.run().then(response => {\n    console.log(response);\n    if (response.code != 0) {\n      storeValue(\"messageResult\", response);\n      return;\n    }\n    removeValue(\"messageResult\");\n    removeValue(\"sumResult\");\n    storeValue(\"messageResult\", response.data.message);\n    storeValue(\"sumResult\", response.data.sum);\n  });\n}"
+      "() => {\n  encMessageAPI.run().then(response => {\n    if (response.code != 0) {\n      storeValue(\"messageResult\", response);\n    } else {\n      storeValue(\"messageResult\", response.data.message);\n      storeValue(\"sumResult\", response.data.sum);\n    }\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

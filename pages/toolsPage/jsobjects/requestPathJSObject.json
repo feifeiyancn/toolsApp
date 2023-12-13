@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\n\tsendRequest: () => {\n\t\t requestPath.run().then((response) => {\n     console.log(response.data);\n\t\t removeValue(\"resData\");\n\t\t if(response.code  != 0){\n\t\t\t  storeValue(\"resData\",response);\n\t\t\t\treturn;\n\t\t }\n\t   storeValue(\"resData\",response.data);\n\t\t })\n\t},\n\t\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "body": "export default {\n\n\tsendRequest: () => {\n\t\t removeValue(\"resData\");\n\t\t requestPath.run().then((response) => {\n\t\t if(response.code  != 0){\n\t\t\t  storeValue(\"resData\",response);\n\t\t }else{\n\t\t\t  storeValue(\"resData\",response.data);\n\t\t }\n\t\t })\n\t},\n\t\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },
