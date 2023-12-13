@@ -25,7 +25,6 @@
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -44,5 +43,5 @@
   },
   "id": "toolsPage_bookMarkJSObject.myFun2",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572d3bc02f2017cc3d3bfc3"
+  "gitSyncId": "6571645002f2017cc3d3b687_6579295e02f2017cc3d3d5e5"
 }
