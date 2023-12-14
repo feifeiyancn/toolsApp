@@ -428,9 +428,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelStyle": "",
@@ -483,7 +480,7 @@
                       "maxDynamicHeight": 9000,
                       "isSpellCheck": true,
                       "iconAlign": "left",
-                      "defaultText": "{{global.URL.queryParams.pubKey}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     },
                     {
@@ -523,9 +520,6 @@
                         },
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Left",
@@ -554,7 +548,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{global.URL.queryParams.path}}",
+                      "defaultText": "",
                       "minDynamicHeight": 4
                     },
                     {
@@ -688,9 +682,6 @@
               "dynamicBindingPathList": [
                 {
                   "key": "accentColor"
-                },
-                {
-                  "key": "defaultText"
                 }
               ],
               "labelPosition": "Top",
@@ -718,7 +709,7 @@
               "maxDynamicHeight": 9000,
               "originalBottomRow": 65,
               "iconAlign": "left",
-              "defaultText": "{{global.store.message}}",
+              "defaultText": "",
               "minDynamicHeight": 4
             },
             {
@@ -2282,18 +2273,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "toolsPage_listBookMarkAPI",
-              "name": "listBookMarkAPI",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "toolsPage",
