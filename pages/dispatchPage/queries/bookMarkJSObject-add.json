@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "requestPathJSObject.myFun2",
+    "name": "add",
+    "fullyQualifiedName": "bookMarkJSObject.add",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
-    "collectionId": "toolsPage_requestPathJSObject",
+    "pageId": "dispatchPage",
+    "collectionId": "dispatchPage_bookMarkJSObject",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "() => {\n  addBookmark.run().then(response => {\n    showAlert(response.msg, \"info\");\n  });\n  closeModal(\"addBookMarkWindow\");\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "() => {\n  addBookmark.run().then(response => {\n    showAlert(response.msg, \"info\");\n  });\n  closeModal(\"addBookMarkWindow\");\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_requestPathJSObject.myFun2",
+  "id": "dispatchPage_bookMarkJSObject.add",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6579294302f2017cc3d3d5e3"
+  "gitSyncId": "6571645002f2017cc3d3b687_657827e102f2017cc3d3d258"
 }

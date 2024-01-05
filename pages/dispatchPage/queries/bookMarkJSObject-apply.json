@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
-    "collectionId": "toolsPage_bookMarkJSObject",
+    "pageId": "dispatchPage",
+    "collectionId": "dispatchPage_bookMarkJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_bookMarkJSObject.apply",
+  "id": "dispatchPage_bookMarkJSObject.apply",
   "deleted": false,
   "gitSyncId": "6571645002f2017cc3d3b687_6572d3bb02f2017cc3d3bfc2"
 }

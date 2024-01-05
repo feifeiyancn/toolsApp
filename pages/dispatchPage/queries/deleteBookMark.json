@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "listBookMarkAPI",
+    "name": "deleteBookMark",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://33fb-103-85-164-231.ngrok-free.app"
+        "url": "https://9a92-103-85-164-231.ngrok-free.app"
       },
       "invalids": [],
       "messages": [],
@@ -16,17 +16,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
+    "pageId": "dispatchPage",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/bookmark/list",
+      "path": "/bookmark/delete",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "user",
-          "value": "default"
+          "key": "id",
+          "value": "{{bookMarkList.selectedItem.id}}"
         }
       ],
       "bodyFormData": [],
@@ -42,17 +42,26 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "path"
+      },
+      {
+        "key": "queryParameters[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
-    "userSetOnLoad": true,
+    "jsonPathKeys": [
+      "bookMarkList.selectedItem.id"
+    ],
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_listBookMarkAPI",
+  "id": "dispatchPage_deleteBookMark",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572c52302f2017cc3d3bf27"
+  "gitSyncId": "6571645002f2017cc3d3b687_6572cf4f02f2017cc3d3bf89"
 }

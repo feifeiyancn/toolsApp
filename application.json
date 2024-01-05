@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "id": "toolsPage",
+      "id": "dispatchPage",
       "isDefault": true
     },
     {
@@ -17,7 +17,7 @@
   "appIsExample": false,
   "unreadCommentThreads": 0,
   "color": "#E3DEFF",
-  "icon": "arrow-right",
+  "icon": "open-new-tab",
   "unpublishedAppLayout": {
     "type": "FLUID"
   },

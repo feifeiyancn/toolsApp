@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "toolsPage",
-    "slug": "toolspage",
+    "name": "dispatchPage",
+    "slug": "dispatchpage",
     "layouts": [
       {
         "viewMode": false,
@@ -433,7 +433,7 @@
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "maxChars": "2000",
-                      "placeholderText": "使用金控提供的公钥加密DATA",
+                      "placeholderText": "加密业务数据",
                       "isDisabled": false,
                       "isRequired": true,
                       "dynamicHeight": "FIXED",
@@ -564,7 +564,7 @@
                       ],
                       "topRow": 12,
                       "bottomRow": 16,
-                      "tooltip": "私钥不会保存到收藏夹",
+                      "tooltip": "收藏夹不会保存私钥",
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -593,7 +593,7 @@
                       "labelPosition": "Left",
                       "labelStyle": "",
                       "inputType": "TEXT",
-                      "placeholderText": "使用接入机构的私钥生成签名",
+                      "placeholderText": "生成签名",
                       "isDisabled": false,
                       "key": "0jm2eye1zl",
                       "labelTextSize": "0.875rem",
@@ -2276,7 +2276,7 @@
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "toolsPage",
+        "id": "dispatchPage",
         "deleted": false,
         "policies": [],
         "userPermissions": []

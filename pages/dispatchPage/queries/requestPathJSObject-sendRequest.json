@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
-    "collectionId": "toolsPage_requestPathJSObject",
+    "pageId": "dispatchPage",
+    "collectionId": "dispatchPage_requestPathJSObject",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -42,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_requestPathJSObject.sendRequest",
+  "id": "dispatchPage_requestPathJSObject.sendRequest",
   "deleted": false,
   "gitSyncId": "6571645002f2017cc3d3b687_657273d102f2017cc3d3bd13"
 }

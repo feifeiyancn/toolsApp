@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "requestPathJSObject",
-    "pageId": "toolsPage",
+    "pageId": "dispatchPage",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -10,7 +10,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "toolsPage_requestPathJSObject",
+  "id": "dispatchPage_requestPathJSObject",
   "deleted": false,
   "gitSyncId": "6571645002f2017cc3d3b687_657273d102f2017cc3d3bd15"
 }

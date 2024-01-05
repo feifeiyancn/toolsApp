@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "encMessageAPI",
+    "name": "listBookMarkAPI",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://1a9b-103-85-164-231.ngrok-free.app"
+        "url": "https://33fb-103-85-164-231.ngrok-free.app"
       },
       "invalids": [],
       "messages": [],
@@ -16,22 +16,21 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "encPage",
+    "pageId": "dispatchPage",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/message/enc",
-      "headers": [
+      "path": "/bookmark/list",
+      "headers": [],
+      "encodeParamsToggle": true,
+      "queryParameters": [
         {
-          "key": "content-type",
-          "value": "application/json"
+          "key": "user",
+          "value": "default"
         }
       ],
-      "encodeParamsToggle": true,
-      "queryParameters": [],
-      "body": "{\n\t\"message\":{{plainTextInput.inputText}},\n\t\"pubKey\":{{pubKey.inputText}},\n\t\"priKey\":{{priKey.inputText}}\n}\n",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -39,29 +38,21 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "plainTextInput.inputText",
-      "priKey.inputText",
-      "pubKey.inputText"
-    ],
-    "userSetOnLoad": false,
+    "jsonPathKeys": [],
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "encPage_encMessageAPI",
+  "id": "dispatchPage_listBookMarkAPI",
   "deleted": false,
-  "gitSyncId": "6571645002f2017cc3d3b687_6572e5fc02f2017cc3d3c0c2"
+  "gitSyncId": "6571645002f2017cc3d3b687_6572c52302f2017cc3d3bf27"
 }

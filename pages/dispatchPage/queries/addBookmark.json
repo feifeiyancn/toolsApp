@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "toolsPage",
+    "pageId": "dispatchPage",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -63,7 +63,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "toolsPage_addBookmark",
+  "id": "dispatchPage_addBookmark",
   "deleted": false,
   "gitSyncId": "6571645002f2017cc3d3b687_6572b8db02f2017cc3d3beef"
 }
